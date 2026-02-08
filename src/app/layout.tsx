@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Provider } from "@/components/ui/provider";
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import Script from "next/script";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -26,11 +27,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <Script src="/libs/three.min.js" strategy="beforeInteractive"/>
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <Provider>
           {children}
           <SpeedInsights />
         </Provider>
+        <Script src="/libs/vanta.waves.min.js" strategy="beforeInteractive"/>
       </body>
     </html>
   );
