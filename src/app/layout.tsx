@@ -28,14 +28,20 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <Script src="/libs/three.min.js" strategy="beforeInteractive"/>
+        <Script 
+          src="/libs/three.min.js" 
+          strategy="beforeInteractive"
+        />
+        <Script 
+          src="/libs/vanta.waves.min.js" 
+          strategy="beforeInteractive"
+        />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <Provider>
           {children}
           <SpeedInsights />
         </Provider>
-        <Script src="/libs/vanta.waves.min.js" strategy="beforeInteractive"/>
       </body>
     </html>
   );

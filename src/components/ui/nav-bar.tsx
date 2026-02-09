@@ -1,4 +1,4 @@
-"use client";
+'use client'
 
 import { Box, HStack } from "@chakra-ui/react";
 import { NavButton } from "./nav-button";
@@ -10,7 +10,7 @@ export const Navbar = () => {
     <Box
       as="nav"
       position="fixed"
-      top="6"
+      top="4"
       left="0"
       right="0"
       zIndex="sticky"
@@ -18,16 +18,16 @@ export const Navbar = () => {
       justifyContent="center"
     >
       <Box
-        bg="rgba(15, 15, 15, 0.4)" 
-        backdropFilter="blur(16px) saturate(180%)" 
+        bg="rgba(10, 10, 10, 0.5)" 
+        backdropFilter="blur(12px) saturate(150%)" 
         borderRadius="full"
         border="1px solid"
-        borderColor="whiteAlpha.200"
-        px={6}
-        py={2}
-        boxShadow="0 8px 32px 0 rgba(0, 0, 0, 0.8)"
+        borderColor="brand.border" 
+        px={5}
+        py={1.5}
+        shadow="0 4px 24px -1px rgba(0, 0, 0, 0.5)"
       >
-        <HStack gap={{ base: 2, md: 6 }}>
+        <HStack gap={{ base: 1, md: 4 }}>
           {navItems.map((item) => (
             <NavButton key={item} name={item} />
           ))}
