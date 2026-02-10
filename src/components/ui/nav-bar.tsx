@@ -6,7 +6,7 @@ import { NavButton } from "./nav-button";
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const navItems = ["Home", "About", "Experience", "Projects", "Contact"];
+  const navItems = ["Home", "About", "Experience", "Projects", "Leadership", "Contact"];
 
   useEffect(() => {
     const handleScroll = () => {

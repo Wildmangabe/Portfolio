@@ -23,7 +23,7 @@ export function HomeSection() {
           </Text>
 
           <Typewriter 
-            text= "Software Engineer | Data Analyst | Tech Enthusiast | Leader | Lifelong Learner "
+            text= "Software Engineer | Data Analyst | Tech Enthusiast | Leader | Lifelong Learner  "
             speed={100}
             deleteSpeed={50}
             delay={1500}
