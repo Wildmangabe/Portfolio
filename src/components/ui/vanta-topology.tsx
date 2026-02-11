@@ -68,7 +68,7 @@ export const VantaTopology = ({ onProgress }: VantaTopologyProps) => {
             minWidth: 200.00,
             scale: 1.00,
             scaleMobile: 1.00,
-            color: 0x1fc71a,
+            color: 0x00ff51,
             backgroundColor: 0x000000,
           });
 
