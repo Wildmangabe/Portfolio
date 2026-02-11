@@ -10,6 +10,8 @@ interface TypewriterProps {
   deleteSpeed?: number;
   pauseBeforeDelete?: number;
   loop?: boolean;
+  noDelete?: boolean;
+  onComplete?: () => void;
   fontSize?: object | string;
   color?: string;
   fontWeight?: string;
@@ -23,6 +25,8 @@ export function Typewriter({
   deleteSpeed = 50,
   pauseBeforeDelete = 2000,
   loop = false,
+  noDelete = false,
+  onComplete,
   fontSize,
   color,
   fontWeight,
@@ -31,6 +35,7 @@ export function Typewriter({
   const [displayedText, setDisplayedText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
+  const [isComplete, setIsComplete] = useState(false);
 
   useEffect(() => {
     if (currentIndex === 0 && !isDeleting && displayedText === "") {
@@ -42,6 +47,15 @@ export function Typewriter({
 
     if (!isDeleting && currentIndex <= text.length) {
       if (currentIndex === text.length) {
+        if (onComplete && !isDeleting) {
+          onComplete();
+        }
+        
+        if (noDelete) {
+          setIsComplete(true);
+          return;
+        }
+        
         const pauseTimeout = setTimeout(() => {
           setIsDeleting(true);
         }, pauseBeforeDelete);
@@ -73,7 +87,7 @@ export function Typewriter({
       }, deleteSpeed);
       return () => clearTimeout(timeout);
     }
-  }, [currentIndex, text, speed, delay, deleteSpeed, pauseBeforeDelete, isDeleting, loop, displayedText]);
+  }, [currentIndex, text, speed, delay, deleteSpeed, pauseBeforeDelete, isDeleting, loop, displayedText, noDelete, onComplete]);
 
   return (
     <Text 
@@ -83,7 +97,7 @@ export function Typewriter({
       {...props}
     >
       {displayedText}
-      <span style={{ opacity: 1 }}>|</span>
+      {!isComplete && <span style={{ opacity: 1 }}>|</span>}
     </Text>
   );
 }

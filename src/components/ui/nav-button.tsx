@@ -12,9 +12,15 @@ export const NavButton = ({ name }: { name: string }) => {
       fontWeight="medium"
       transition="all 0.2s ease-in-out"
     >
-      <NextLink href={`#${name.toLowerCase()}`}>
-        {name}
-      </NextLink>
+    <NextLink 
+      href="/"
+      onClick={(e) => {
+        e.preventDefault();
+        document.getElementById(name.toLowerCase())?.scrollIntoView({ behavior: 'smooth' });
+      }}
+    >
+      {name}
+    </NextLink>
     </Button>
   );
 };

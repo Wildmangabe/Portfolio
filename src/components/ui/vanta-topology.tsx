@@ -3,11 +3,11 @@
 import { useEffect, useRef } from "react";
 import { Box } from "@chakra-ui/react";
 
-interface VantaWavesProps {
+interface VantaTopologyProps {
   onProgress?: (progress: number) => void;
 }
 
-export const VantaWaves = ({ onProgress }: VantaWavesProps) => {
+export const VantaTopology = ({ onProgress }: VantaTopologyProps) => {
   const vantaRef = useRef<HTMLDivElement>(null);
   const vantaEffect = useRef<any>(null);
 
@@ -58,20 +58,18 @@ export const VantaWaves = ({ onProgress }: VantaWavesProps) => {
 
         // Initialize Vanta effect
         const VANTA = (window as any).VANTA;
-        if (isMounted && VANTA?.WAVES && vantaRef.current) {
-          vantaEffect.current = VANTA.WAVES({
+        if (isMounted && VANTA?.TOPOLOGY && vantaRef.current) {
+          vantaEffect.current = VANTA.TOPOLOGY({
             el: vantaRef.current,
             mouseControls: true,
             touchControls: true,
             gyroControls: false,
-            minHeight: 200.0,
-            minWidth: 200.0,
-            scale: 1.0,
-            scaleMobile: 1.0,
-            color: 0xe1014,
-            shininess: 22.00,
-            waveHeight: 30.50,
-            zoom: 0.75,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0x1fc71a,
+            backgroundColor: 0x000000,
           });
 
           onProgress?.(90);

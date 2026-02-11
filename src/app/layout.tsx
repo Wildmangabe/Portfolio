@@ -33,6 +33,14 @@ export default function RootLayout({
           strategy="beforeInteractive"
         />
         <Script 
+          src="/libs/p5.min.js" 
+          strategy="beforeInteractive"
+        />
+        <Script 
+          src="/libs/vanta.topology.min.js" 
+          strategy="beforeInteractive"
+        />
+        <Script 
           src="/libs/vanta.waves.min.js" 
           strategy="beforeInteractive"
         />
