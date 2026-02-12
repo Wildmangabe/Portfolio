@@ -14,7 +14,7 @@ export const glassStyles = {
     bg: "rgba(0, 0, 0, 0.1)",
     borderRadius: "xl",
     border: "1px solid",
-    borderColor: "rgba(255, 255, 255, 0.2)",
+    borderColor: "rgba(255, 255, 255, 0.07)",
     boxShadow: "0 8px 32px rgba(0, 0, 0, 0.2)",
   }
 }
@@ -30,7 +30,8 @@ const customConfig = defineConfig({
           offWhite: { value: "#ededed" },
           green: { value: "#00ff51" },
           forest: { value: "#0b3d1e" },
-          slate: { value: "#666666" }, 
+          slate: { value: "#666666" },
+          lightSlate: { value: "#999999" }
         },
       },
       fonts: {
@@ -54,7 +55,7 @@ const customConfig = defineConfig({
             value: { _light: "{colors.brand.black}", _dark: "{colors.brand.offWhite}" } 
           },
           muted: { 
-            value: { _light: "{colors.brand.slate}", _dark: "{colors.brand.slate}" } 
+            value: { _light: "{colors.brand.slate}", _dark: "{colors.brand.offWhite}" } 
           },
           accent: {
             value: { _light: "{colors.brand.offWhite}", _dark: "{colors.brand.green}" }
@@ -65,7 +66,7 @@ const customConfig = defineConfig({
         },
         border: {
           DEFAULT: {
-            value: { _light: "{colors.brand.offWhite}", _dark: "{colors.brand.gray}" }
+            value: { _light: "{colors.brand.offWhite}", _dark: "{colors.brand.slate}" }
           },
           accent: {
             value: { _light: "{colors.brand.black}", _dark: "{colors.brand.green}" }

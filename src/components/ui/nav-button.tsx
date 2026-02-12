@@ -8,7 +8,7 @@ export const NavButton = ({ name }: { name: string }) => {
     <Button
       asChild
       variant="ghost"
-      size="sm"
+      size="md"
       fontWeight="medium"
       transition="all 0.2s ease-in-out"
     >

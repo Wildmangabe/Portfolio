@@ -2,6 +2,7 @@ import { Box, Container, Grid, GridItem, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import { SocialLinks } from "@/components/ui/social-links";
 import { SectionHeader } from "@/components/ui/section-header";
+import { glassStyles } from "@/app/theme";
 
 export function AboutSection() {
   return (
@@ -13,7 +14,9 @@ export function AboutSection() {
       alignItems="center"
       py={20}
     >
-      <Container maxW="7xl">
+      <Container 
+        maxW="7xl"
+      >
         <Box>
           <SectionHeader title="About Me" />
         </Box>
@@ -22,6 +25,8 @@ export function AboutSection() {
           templateColumns={{ base: "1fr", md: "1fr 1fr" }}
           gap={8}
           alignItems="center"
+          p={{ base: 4, md: 8 }} 
+          {...glassStyles.heavy}
         >
           <GridItem>
             <Text fontSize="lg" color="fg.muted" mb={4}>

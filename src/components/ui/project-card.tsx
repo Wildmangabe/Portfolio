@@ -5,6 +5,8 @@ import {
   Button,
   Link,
   For,
+  Span,
+  VStack,
 } from "@chakra-ui/react";
 import { LuGithub, LuExternalLink } from "react-icons/lu";
 import type { Project } from "@/data/projects";
@@ -41,14 +43,17 @@ export function ProjectCard({ project }: ProjectCardProps) {
         <Card.Description lineHeight="tall">
           {project.description}
         </Card.Description>
-        {project.tags && project.tags.length > 0 && (
+      </Card.Body>
+      <Card.Footer>
+        <VStack gap={2} align="start">
+          {project.tags && project.tags.length > 0 && (
           <HStack flexWrap="wrap" gap={2} mt={2}>
             <For each={project.tags}>
               {(tag) => (
                 <Badge
                   key={tag}
-                  colorPalette="gray"
-                  variant="surface"
+                  colorPalette="green"
+                  variant="subtle"
                   size="sm"
                 >
                   {tag}
@@ -57,34 +62,33 @@ export function ProjectCard({ project }: ProjectCardProps) {
             </For>
           </HStack>
         )}
-      </Card.Body>
-      <Card.Footer>
-        <HStack gap={2}>
-          {project.links.github && (
-            <Button asChild size="sm" variant="outline" colorPalette="gray">
-              <Link
-                href={project.links.github}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <LuGithub />
-                Code
-              </Link>
-            </Button>
-          )}
-          {project.links.demo && (
-            <Button asChild size="sm" colorPalette="gray">
-              <Link
-                href={project.links.demo}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <LuExternalLink />
-                Demo
-              </Link>
-            </Button>
-          )}
-        </HStack>
+          <HStack gap={2}>
+            {project.links.github && (
+              <Button asChild size="sm" variant="outline" colorPalette="green">
+                <Link
+                  href={project.links.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <LuGithub />
+                  Code
+                </Link>
+              </Button>
+            )}
+            {project.links.demo && (
+              <Button asChild size="sm" colorPalette="gray">
+                <Link
+                  href={project.links.demo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <LuExternalLink />
+                  Demo
+                </Link>
+              </Button>
+            )}
+          </HStack>
+        </VStack>
       </Card.Footer>
     </Card.Root>
   );

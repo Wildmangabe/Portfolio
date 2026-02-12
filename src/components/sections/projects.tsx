@@ -8,7 +8,7 @@ import {
 } from "@chakra-ui/react";
 import { SectionHeader } from "@/components/ui/section-header";
 import { ProjectCard } from "@/components/ui/project-card";
-import { projects, getProjectsByType } from "@/data/projects";
+import { getProjectsByType } from "@/data/projects";
 
 const tabCategories = [
   { label: "All", type: "all" as const },
@@ -23,16 +23,14 @@ export function ProjectsSection() {
     <Box
       as="section"
       id="projects"
-      minH="10vh"
-      display="flex"
+      minH="90vh"
       alignItems="center"
       py={20}
     >
       <Container maxW="7xl" mx="auto">
         <SectionHeader title="Projects" />
-
-        <Tabs.Root variant="outline" colorPalette="gray" mt={8} lazyMount defaultValue="all">
-          <Tabs.List>
+        <Tabs.Root variant="outline" colorPalette="green" mt={8} lazyMount defaultValue="all">
+          <Tabs.List borderColor="fg.muted">
             <For each={tabCategories}>
               {(category) => (
                 <Tabs.Trigger 
@@ -75,7 +73,7 @@ export function ProjectsSection() {
               return (
                 <Tabs.Content key={category.type} value={category.type}>
                   {filteredProjects.length === 0 ? (
-                    <Text color="gray.500" textAlign="center" py={8}>
+                    <Text color="fg" textAlign="center" py={8}>
                       No projects in this category yet.
                     </Text>
                   ) : (
