@@ -12,6 +12,7 @@ export const VantaBackground = ({ onProgress }: VantaBackgroundProps) => {
   const vantaRef = useRef<HTMLDivElement>(null);
   const vantaEffect = useRef<any>(null);
   const { colorMode } = useColorMode();
+  const isInitialLoad = useRef(true);
 
   useEffect(() => {
     let isMounted = true;
@@ -20,40 +21,32 @@ export const VantaBackground = ({ onProgress }: VantaBackgroundProps) => {
       if (!vantaRef.current) return;
 
       try {
-        onProgress?.(10);
-        await new Promise(resolve => setTimeout(resolve, 100));
-        
-        onProgress?.(25);
-        await new Promise(resolve => setTimeout(resolve, 100));
+        if (isInitialLoad.current) {
+          onProgress?.(10);
+          await new Promise(resolve => setTimeout(resolve, 100));
+          onProgress?.(25);
+          await new Promise(resolve => setTimeout(resolve, 100));
+        }
 
-        if (!(window as any).THREE) {
+        if (!(window as any).THREE || !(window as any).VANTA) {
           await new Promise<void>((resolve) => {
-            const checkThree = setInterval(() => {
-              if ((window as any).THREE) {
-                clearInterval(checkThree);
+            const checkLibs = setInterval(() => {
+              if ((window as any).THREE && (window as any).VANTA) {
+                clearInterval(checkLibs);
                 resolve();
               }
             }, 100);
           });
         }
-        onProgress?.(45);
-        await new Promise(resolve => setTimeout(resolve, 100));
 
-        onProgress?.(60);
-        await new Promise(resolve => setTimeout(resolve, 100));
-
-        if (!(window as any).VANTA) {
-          await new Promise<void>((resolve) => {
-            const checkVanta = setInterval(() => {
-              if ((window as any).VANTA) {
-                clearInterval(checkVanta);
-                resolve();
-              }
-            }, 100);
-          });
+        if (isInitialLoad.current) {
+          onProgress?.(45);
+          await new Promise(resolve => setTimeout(resolve, 100));
+          onProgress?.(60);
+          await new Promise(resolve => setTimeout(resolve, 100));
+          onProgress?.(75);
+          await new Promise(resolve => setTimeout(resolve, 100));
         }
-        onProgress?.(75);
-        await new Promise(resolve => setTimeout(resolve, 100));
 
         if (vantaEffect.current) {
           vantaEffect.current.destroy();
@@ -93,11 +86,13 @@ export const VantaBackground = ({ onProgress }: VantaBackgroundProps) => {
             });
           }
 
-          onProgress?.(90);
-          await new Promise(resolve => setTimeout(resolve, 200));
-
-          if (isMounted) {
-            onProgress?.(100);
+          if (isInitialLoad.current) {
+            onProgress?.(90);
+            await new Promise(resolve => setTimeout(resolve, 200));
+            if (isMounted) {
+              onProgress?.(100);
+              isInitialLoad.current = false;
+            }
           }
         }
       } catch (error) {

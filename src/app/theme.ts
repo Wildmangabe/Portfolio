@@ -52,16 +52,16 @@ const customConfig = defineConfig({
         },
         fg: {
           DEFAULT: { 
-            value: { _light: "{colors.brand.black}", _dark: "{colors.brand.offWhite}" } 
+            value: { _light: "{colors.brand.black}", _dark: "{colors.brand.white}" } 
           },
           muted: { 
-            value: { _light: "{colors.brand.slate}", _dark: "{colors.brand.offWhite}" } 
+            value: { _light: "{colors.brand.black}", _dark: "{colors.brand.offWhite}" } 
           },
           accent: {
             value: { _light: "{colors.brand.offWhite}", _dark: "{colors.brand.green}" }
           },
           onAccent: {
-            value: { _light: "{colors.brand.white}", _dark: "{colors.brand.black}" }
+            value: { _light: "{colors.brand.black}", _dark: "{colors.brand.green}" }
           }
         },
         border: {
@@ -74,7 +74,7 @@ const customConfig = defineConfig({
         },
         glassLight: {
           bg: {
-            value: { _light: "rgba(255, 255, 255, 0.1)", _dark: "rgba(107, 104, 104, 0.43)" }
+            value: { _light: "rgba(0, 0, 0, 0.1)", _dark: "rgba(107, 104, 104, 0.43)" }
           },
           border: {
             value: { _light: "rgba(255, 255, 255, 0.2)", _dark: "rgba(255, 255, 255, 0.07)" }
@@ -82,10 +82,10 @@ const customConfig = defineConfig({
         },
         glassHeavy: {
           bg: {
-            value: { _light: "rgba(255, 255, 255, 0.3)", _dark: "rgba(0, 0, 0, 0.3)" }
+            value: { _light: "rgba(177, 177, 177, 0.15)", _dark: "rgba(0, 0, 0, 0.3)" }
           },
           border: {
-            value: { _light: "rgba(255, 255, 255, 0.3)", _dark: "rgba(255, 255, 255, 0.1)" }
+            value: { _light: "rgba(7, 7, 7, 0.71)", _dark: "rgba(255, 255, 255, 0.1)" }
           } 
         },
       },

@@ -13,35 +13,26 @@ export const ClairObscur = () => {
     setMounted(true);
   }, []);
 
-  const isDark = mounted && colorMode === "dark";
-  const isLight = mounted && colorMode === "light";
-
-  const hoverStyles = {
-    color: "fg.accent",
-    transform: "translateY(-1px)",
-  };
+  const isDark = mounted && colorMode === 'dark';
+  const isLight = mounted && colorMode === 'light';
 
   return (
     <Box
       as="section"
       id="clair-obscur"
-      bottom="0"
-      left="0"
-      right="0"
-      zIndex={1000}
       display="flex"
       alignItems="center"
       justifyContent="center"
       py={6}
     >
       <Container
-        maxW="xl"
+        maxW="5xl"
         px={6}
         py={3}
         {...glassStyles.heavy}
       >
         <Text
-          fontSize={{ base: "md", md: "lg" }}
+          fontSize={{ base: "sm", md: "md" }}
           color="fg.muted"
           fontStyle="italic"
           fontFamily="fonts.body"
@@ -53,21 +44,28 @@ export const ClairObscur = () => {
             as="span"
             cursor={isDark ? "pointer" : "default"}
             onClick={() => isDark && setColorMode('light')}
-            color={isDark ? "fg" : "fg.muted"}
-            fontWeight="medium"
+            color= "fg.muted"
+            fontWeight= "medium"
             transition="all 0.3s ease"
-            _hover={isDark ? hoverStyles : {}}
+            _hover={isDark ? {
+              color: "fg.accent",
+              transform: "translateY(-1px)",
+            } : {}}
           >
             Clair
-          </Text>{" "}
+          </Text>
+          {" "}
           <Text
             as="span"
             cursor={isLight ? "pointer" : "default"}
             onClick={() => isLight && setColorMode('dark')}
-            color={isLight ? "fg" : "fg.muted"}
-            fontWeight="medium"
+            color= "fg.muted"
+            fontWeight= "medium"
             transition="all 0.3s ease"
-            _hover={isLight ? hoverStyles : {}}
+            _hover={isLight ? {
+              color: "fg.accent",
+              transform: "translateY(-1px)",
+            } : {}}
           >
             Obscur
           </Text>
