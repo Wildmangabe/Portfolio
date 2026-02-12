@@ -5,7 +5,6 @@ import {
   Button,
   Link,
   For,
-  Span,
   VStack,
 } from "@chakra-ui/react";
 import { LuGithub, LuExternalLink } from "react-icons/lu";

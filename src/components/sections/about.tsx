@@ -30,7 +30,7 @@ export function AboutSection() {
         >
           <GridItem>
             <Text fontSize="lg" color="fg.muted" mb={4}>
-              Hey, I'm Gabe, a graduate Computer Science student at Texas A&M University graduating in Spring 2026 with interests in software engineering, data science, and cybersecurity. What drives me is helping others make data driven decisions by building machines to make data more accessible and understandable. I'm passionate about learning and staying curious about new technologies and their applications. I bvelieve that the best ideas come from geniune conversation, collaboration and connection, so feel free to reach out!
+              Hey, I'm Gabe, a graduate Computer Science student at Texas A&M University graduating in Spring 2026 with interests in software engineering, data science, and cybersecurity. What drives me is helping others make data driven decisions by building machines to make data more accessible and understandable. I'm passionate about learning and staying curious about new technologies and their applications. I believe that the best ideas come from geniune conversation, collaboration and connection, so feel free to reach out!
             </Text>
             <SocialLinks />
           </GridItem>
