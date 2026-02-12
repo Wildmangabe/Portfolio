@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react';
-import { VantaTopology } from '@/components/ui/vanta-topology';
+import { VantaBackground } from '@/components/ui/vanta';
 import { Navbar } from '@/components/ui/nav-bar';
 import { LoadingScreen } from '@/components/ui/loading';
 import { HomeSection } from '@/components/sections/home';
@@ -11,6 +11,7 @@ import { ProjectsSection } from '@/components/sections/projects';
 import { LeadershipSection } from '@/components/sections/leadership';
 import { TechStackSection } from '@/components/sections/tech-stack';
 import { ContactSection } from '@/components/sections/contact';
+import { ClairObscur } from '@/components/sections/clair-obscur';
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -26,7 +27,7 @@ export default function Home() {
       )}
       
       <main>
-        <VantaTopology onProgress={setVantaProgress} />
+        <VantaBackground onProgress={setVantaProgress} />
         <Navbar />
         <HomeSection isLoadingComplete={!isLoading} />
         <AboutSection />
@@ -35,6 +36,7 @@ export default function Home() {
         <TechStackSection />
         <LeadershipSection />
         <ContactSection />
+        <ClairObscur />
       </main>
     </>
   );

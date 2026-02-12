@@ -3,18 +3,18 @@ import { createSystem, defaultConfig, defineConfig } from "@chakra-ui/react"
 export const glassStyles = {
   light: {
     backdropFilter: "blur(10px)",
-    bg: "whiteAlpha.100",
+    bg: "glassLight.bg",
     borderRadius: "xl",
     border: "1px solid",
-    borderColor: "whiteAlpha.200",
+    borderColor: "glassLight.border",
     boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
   },
   heavy: {
     backdropFilter: "blur(10px) saturate(150%)",
-    bg: "rgba(0, 0, 0, 0.1)",
+    bg: "glassHeavy.bg",
     borderRadius: "xl",
     border: "1px solid",
-    borderColor: "rgba(255, 255, 255, 0.07)",
+    borderColor: "glassHeavy.border",
     boxShadow: "0 8px 32px rgba(0, 0, 0, 0.2)",
   }
 }
@@ -71,7 +71,23 @@ const customConfig = defineConfig({
           accent: {
             value: { _light: "{colors.brand.black}", _dark: "{colors.brand.green}" }
           }
-        }
+        },
+        glassLight: {
+          bg: {
+            value: { _light: "rgba(255, 255, 255, 0.1)", _dark: "rgba(107, 104, 104, 0.43)" }
+          },
+          border: {
+            value: { _light: "rgba(255, 255, 255, 0.2)", _dark: "rgba(255, 255, 255, 0.07)" }
+          }
+        },
+        glassHeavy: {
+          bg: {
+            value: { _light: "rgba(255, 255, 255, 0.3)", _dark: "rgba(0, 0, 0, 0.3)" }
+          },
+          border: {
+            value: { _light: "rgba(255, 255, 255, 0.3)", _dark: "rgba(255, 255, 255, 0.1)" }
+          } 
+        },
       },
     },
   },
