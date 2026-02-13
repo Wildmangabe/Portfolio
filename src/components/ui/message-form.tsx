@@ -74,6 +74,9 @@ export function MessageForm() {
           colorPalette={state.succeeded ? "green" : "gray"}
           variant={state.succeeded ? "subtle" : "plain"}
           mt={4}
+          mx='auto'
+          w="fit-content"
+          px={4}
           size="lg"
           color={state.succeeded ? "brand.green" : "fg"}
           _hover={!state.succeeded ? { 
