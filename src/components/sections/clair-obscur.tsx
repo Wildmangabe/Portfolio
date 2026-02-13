@@ -5,7 +5,7 @@ import { useColorMode } from "@/components/ui/color-mode";
 import { glassStyles } from "@/app/theme";
 import { useEffect, useState } from "react";
 
-export const ClairObscur = () => {
+export const QuoteSection = () => {
   const { colorMode, setColorMode } = useColorMode();
   const [mounted, setMounted] = useState(false);
 

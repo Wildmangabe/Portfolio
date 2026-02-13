@@ -9,9 +9,10 @@ import { AboutSection } from '@/components/sections/about';
 import { ExperienceSection } from '@/components/sections/experience';
 import { ProjectsSection } from '@/components/sections/projects';
 import { LeadershipSection } from '@/components/sections/leadership';
+import { CertificateSection } from '@/components/sections/certifcates';
 import { TechStackSection } from '@/components/sections/tech-stack';
 import { ContactSection } from '@/components/sections/contact';
-import { ClairObscur } from '@/components/sections/clair-obscur';
+import { QuoteSection } from '@/components/sections/clair-obscur';
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -34,9 +35,8 @@ export default function Home() {
         <ExperienceSection />
         <ProjectsSection />
         <TechStackSection />
-        <LeadershipSection />
         <ContactSection />
-        <ClairObscur />
+        <QuoteSection />
       </main>
     </>
   );
