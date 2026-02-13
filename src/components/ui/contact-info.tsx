@@ -1,6 +1,6 @@
 "use client";
 
-import { VStack, Text, Flex, Button, Image, Icon, useClipboard } from "@chakra-ui/react";
+import { Box, VStack, Text, Flex, Button, Image, Icon, useClipboard } from "@chakra-ui/react";
 import { SiGooglemaps } from "react-icons/si";
 import { SectionHeader } from "@/components/ui/section-header";
 import { toaster } from "@/components/ui/toaster";
@@ -22,12 +22,14 @@ export function ContactInfo() {
   return (
     <VStack align="start" gap={6}>
       <SectionHeader title="Get In Touch." />
-      <Text fontSize="lg" color="fg" maxW="400px">
-        I’m always excited to meet new people and hear about new and 
-        interesting things. Whether you have a project in mind or just 
-        want to say hi, my inbox is always open.
-      </Text>
-      
+
+      <Box {...glassStyles.light} p={4}>
+        <Text fontSize="lg" color="fg" maxW="400px">
+          I’m always excited to meet new people and hear about new and 
+          interesting topics in tech. Whether you have a project in mind or just 
+          want to say hi, my inbox is always open.
+        </Text>
+      </Box>
       <Flex align="center" gap={3} mt={4}>
         <Button
           onClick={handleCopy}
