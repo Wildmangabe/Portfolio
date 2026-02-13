@@ -4,7 +4,7 @@ Personal website and portfolio of **Gabe Wild**, a software developer with inter
 
 This site serves as a central hub to showcase my projects, experience, and technical skills as well as provide a way to get in touch.
 
-[Link to Live Demo](https://portfolio-gabe-wilds-projects.vercel.app/)
+[Link to Portfolio](https://portfolio-gabe-wilds-projects.vercel.app/)
 
 ## Technical Stack
 
