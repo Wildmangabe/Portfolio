@@ -25,7 +25,7 @@ This project is a non-commercial technical demonstration. All intellectual prope
 * **Usage:** Audio snippets and quotes are used under Fair Use principles for transformative, non-commercial, and portfolio purposes. No copyright infringement is intended. 
 
 > [!IMPORTANT]
-> If you are a rights holder and wish for this content to be removed, please contact me at [Your Email] and I will comply immediately.
+> If you are a rights holder and wish for this content to be removed, please contact me at wildmangabe@gmail.com and I will comply immediately.
 
 ## License
 
