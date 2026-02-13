@@ -44,6 +44,12 @@ export default function RootLayout({
           src="/libs/vanta.waves.min.js" 
           strategy="beforeInteractive"
         />
+        <link
+          rel="preload"
+          href="/audio/gustave-E33.mp3"
+          as="audio"
+          type="audio/mpeg"
+        />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <Provider>
