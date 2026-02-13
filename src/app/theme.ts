@@ -31,7 +31,9 @@ const customConfig = defineConfig({
           green: { value: "#00ff51" },
           forest: { value: "#0b3d1e" },
           slate: { value: "#666666" },
-          lightSlate: { value: "#999999" }
+          lightSlate: { value: "#999999" },
+          whiteAlpha1: {value: "#FFFFFF1A" },
+          whiteAlpha2: {value: "#FFFFFF33" },
         },
       },
       fonts: {
@@ -74,10 +76,10 @@ const customConfig = defineConfig({
         },
         glassLight: {
           bg: {
-            value: { _light: "rgba(0, 0, 0, 0.1)", _dark: "rgba(107, 104, 104, 0.43)" }
+            value: { _light: "rgba(0, 0, 0, 0.1)", _dark: "colors.brand.whiteAlpha1" }
           },
           border: {
-            value: { _light: "rgba(255, 255, 255, 0.2)", _dark: "rgba(255, 255, 255, 0.07)" }
+            value: { _light: "rgba(255, 255, 255, 0.2)", _dark: "colors.brand.whiteAlpha2" }
           }
         },
         glassHeavy: {

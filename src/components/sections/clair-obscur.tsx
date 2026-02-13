@@ -26,7 +26,7 @@ export const ClairObscur = () => {
       py={6}
     >
       <Container
-        maxW="5xl"
+        maxW="xl"
         px={6}
         py={3}
         {...glassStyles.heavy}
