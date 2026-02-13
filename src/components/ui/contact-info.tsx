@@ -66,7 +66,7 @@ export function ContactInfo() {
           fontWeight="bold"
           fontSize="sm"
         >
-          <Icon as={SiGooglemaps} boxSize={4} color="fg.accent" />
+          <Icon as={SiGooglemaps} boxSize={4} color="fg.onAccent" />
           <Text whiteSpace="nowrap">College Station, TX</Text>
         </Flex>
       </Flex>
