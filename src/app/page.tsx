@@ -9,7 +9,6 @@ import { AboutSection } from '@/components/sections/about';
 import { ExperienceSection } from '@/components/sections/experience';
 import { ProjectsSection } from '@/components/sections/projects';
 import { LeadershipSection } from '@/components/sections/leadership';
-import { CertificateSection } from '@/components/sections/certifcates';
 import { TechStackSection } from '@/components/sections/tech-stack';
 import { ContactSection } from '@/components/sections/contact';
 import { QuoteSection } from '@/components/sections/clair-obscur';

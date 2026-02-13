@@ -34,7 +34,7 @@ export function HomeSection({ isLoadingComplete }: HomeSectionProps) {
           )}
           {isLoadingComplete && (
             <Typewriter 
-              text="Software Engineer | Data Analyst | Tech Enthusiast | Lifelong Learner  "
+              text="Software Engineer | Data Scientist | Tech Enthusiast | Lifelong Learner  "
               deleteSpeed={50}
               delay={500}
               pauseBeforeDelete={2000}

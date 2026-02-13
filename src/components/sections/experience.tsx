@@ -1,5 +1,6 @@
 import { Accordion, Box, Container, Span, Text, Flex, VStack, HStack } from '@chakra-ui/react';
 import { SectionHeader } from '@/components/ui/section-header';
+import { glassStyles } from '@/app/theme';
 
 export function ExperienceSection() {
     const items = [
@@ -33,11 +34,7 @@ export function ExperienceSection() {
         <Accordion.Root 
           collapsible 
           defaultValue={["a"]}
-          bg="whiteAlpha.100"
-          backdropFilter="blur(10px)"
-          borderRadius="xl"
-          border="1px solid"
-          borderColor="whiteAlpha.200"
+          {...glassStyles.light}
           p={4}
         >
             {items.map((item, index) => (
