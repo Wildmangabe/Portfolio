@@ -6,7 +6,7 @@
  */
 
 export interface Project {
-  type: "AI/ML" | "Web App" | "Mobile";
+  type: "AI/ML" | "Data Science" | "Web App" | "Mobile" ;
   title: string;
   description: string;
   links: {
@@ -18,6 +18,16 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+  {
+    type: "AI/ML",
+    title: "Optimizing Network Intrusion Detection Systems (NIDS)",
+    description: "A research study that evaluated and optimized various machine learning models (Random Forest, SVM, CNN) for identifying malicious web traffic using the CIC UNSW-NB15 Augmented Dataset. Achieved high-accuracy multi-class classification and reduced false alarm rates through systematic hyperparameter tuning using Optuna and Hyperopt.",
+    links: {
+      demo: "/Optimizing_Intrusion_Detection_through_Web_Traffic_Using_the_CIC_UNSW-NB15_Augmented_Dataset.pdf" 
+    },
+    tags: ["Cybersecurity", "Machine Learning", "Intrusion Detection", "Python", "Random Forest", "Neural Networks", "Hyperparameter Optimization"],
+    importance: "high"
+  },
   {
     type: "Mobile",
     title: "Aggie Wine Glass",
@@ -33,7 +43,6 @@ export const projects: Project[] = [
       "Recommendation",
       "Personalization",
       "Machine Learning",
-      "User Preference Modeling",
       "Web Scraping",
       "Data Pipeline",
       "Full-Stack",
@@ -74,11 +83,43 @@ export const projects: Project[] = [
       "PostgreSQL",
       "REST API",
       "Mobile App Architecture",
-      "Event Management",
       "Full-Stack"
     ],
-    importance: "high",
+    importance: "med",
   },
+  {
+    type: "Data Science",
+    title: "Global Spotify Trends: Regional & Temporal Analysis",
+    description: "A data mining project that deconstructed global music consumption from 2017-2021. Used audio-feature clustering (K-Means/DBSCAN) and dimensionality reduction (PCA/UMAP) to identify distinct 'music profiles' and analyze how preferences shift across 60+ countries.",
+    links: {
+      github: "https://github.com/Wildmangabe/spotify-trend-analysis",
+      demo: "https://colab.research.google.com/drive/10brhy7pfc4WsMLQb-62AXSDOHfZ_VeeF?usp=sharing"
+    },
+    tags: ["Python", "Machine Learning", "Data Mining", "Data Engineering", "Clustering", "Data Pipeline", "Data Science", "Visualization"],
+    importance: "high" 
+  },
+  {
+  type: "Web App",
+  title: "VideoVibes: Al-Mediated Video Conferencing",
+  description: "An augmentation to the Jitsi Meet platform which integrated with real-time emotion recognition and sarcasm detection. Designed to enhance 'social presence' for neurodivergent users, it translates subtle facial and tonal cues into live emoji overlays for all users. Also includes a 'Learning Mode' for social-affective training.",
+  links: {
+    github: "https://github.com/arielamitr/VideoVibes",
+    demo: "/VideoVibes_Paper.pdf" 
+  },
+  tags: ["React", "Node.js", "Python", "Jitsi Meet", "face-api.js", "Machine Learning", "WebRTC"],
+  importance: "med"
+  },
+  {
+  type: "AI/ML",
+  title: "Lung and Colon Cancer Classification",
+  description: "Developed a high-precision Vision Transformer (ViT) model to classify lung and colon cancer histopathological images. Achieved 99.63% accuracy in differentiating between benign and malignant cells, significantly outperformed standard benchmarks for early diagnostic support.",
+  links: {
+    github: "https://github.com/skandrigi/Ignite_LungColonTumor_Classification",
+    demo: "https://huggingface.co/ebmonser/lung-cancer-image-classification" 
+  },
+  tags: ["Computer Vision", "Vision Transformer (ViT)", "PyTorch", "Healthcare AI", "Computational Biology"],
+  importance: "high"
+  }
 ];
 
 export function getProjectsByType(type: Project["type"] | "all"): Project[] {

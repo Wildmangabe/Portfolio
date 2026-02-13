@@ -13,6 +13,7 @@ import { getProjectsByType } from "@/data/projects";
 const tabCategories = [
   { label: "All", type: "all" as const },
   { label: "AI/ML", type: "AI/ML" as const },
+  { label: "Data Science", type: "Data Science" as const },
   { label: "Web App", type: "Web App" as const },
   { label: "Mobile", type: "Mobile" as const },
 ];
