@@ -4,8 +4,8 @@ export interface ExperienceItem {
   company: string;
   location: string;
   time: string;
-  summary: string; // Narrative overview
-  contributions: string[]; // Technical bullet points
+  summary: string;
+  contributions: string[];
 }
 
 export const experienceData: ExperienceItem[] = [

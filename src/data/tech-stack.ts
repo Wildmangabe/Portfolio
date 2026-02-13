@@ -5,7 +5,7 @@ import {
   // Front End
   SiReact, SiNextdotjs, SiChakraui,
   // Back End
-  SiNodedotjs, SiExpress, SiVapor,
+  SiNodedotjs, SiVapor,
   // Data & AI
   SiPytorch, SiTensorflow, SiNumpy, SiPandas, SiScikitlearn,
   // Tools & Infra
@@ -43,7 +43,6 @@ export const TECH_STACK = [
     skills: [
       { name: "Node.js", icon: SiNodedotjs },
       { name: "Vapor", icon: SiVapor },
-      { name: "Express", icon: SiExpress },
     ]
   },
   {

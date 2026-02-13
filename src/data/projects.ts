@@ -23,7 +23,7 @@ export const projects: Project[] = [
     title: "Optimizing Network Intrusion Detection Systems (NIDS)",
     description: "A research study that evaluated and optimized various machine learning models (Random Forest, SVM, CNN) for identifying malicious web traffic using the CIC UNSW-NB15 Augmented Dataset. Achieved high-accuracy multi-class classification and reduced false alarm rates through systematic hyperparameter tuning using Optuna and Hyperopt.",
     links: {
-      demo: "/Optimizing_Intrusion_Detection_through_Web_Traffic_Using_the_CIC_UNSW-NB15_Augmented_Dataset.pdf" 
+      demo: "/Optimizing_Intrusion_Detection.pdf" 
     },
     tags: ["Cybersecurity", "Machine Learning", "Intrusion Detection", "Python", "Random Forest", "Neural Networks", "Hyperparameter Optimization"],
     importance: "high"
