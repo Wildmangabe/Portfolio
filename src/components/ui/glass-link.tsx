@@ -38,7 +38,7 @@ export function GlassLink({ href, icon, alt, label, isExternal = true }: GlassLi
           w={6}
           h={6}
           objectFit="contain"
-          filter="invert(.7)"
+          filter="invert(1)"
           transition="filter 0.3s"
         />
       )}
