@@ -7,6 +7,7 @@ import {
   For,
   VStack,
 } from "@chakra-ui/react";
+import { glassDecorations, glassEffects, chakraAccent } from "@/app/theme";
 import { LuGithub, LuExternalLink } from "react-icons/lu";
 import type { Project } from "@/data/projects";
 
@@ -20,21 +21,12 @@ export function ProjectCard({ project }: ProjectCardProps) {
       size="sm"
       variant="outline"
       transition="all 0.3s"
-      bg="rgba(255, 255, 255, 0.1)"
-      backdropFilter="blur(10px)"
-      borderColor="rgba(255, 255, 255, 0.2)"
-      _dark={{
-        bg: "rgba(0, 0, 0, 0.2)",
-        backdropFilter: "blur(10px)",
-        borderColor: "rgba(255, 255, 255, 0.1)",
-      }}
+      {...glassEffects.heavy}
+      {...glassDecorations.heavy}
       _hover={{
         transform: "translateY(-4px)",
         shadow: "lg",
-        bg: "rgba(255, 255, 255, 0.15)",
-        _dark: {
-          bg: "rgba(0, 0, 0, 0.3)",
-        },
+        bg: "rgba(0, 0, 0, 0.29)",
       }}
     >
       <Card.Body gap={4}>
@@ -51,7 +43,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
               {(tag) => (
                 <Badge
                   key={tag}
-                  colorPalette="green"
+                  {...chakraAccent}
                   variant="subtle"
                   size="sm"
                 >
@@ -63,7 +55,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
         )}
           <HStack gap={2}>
             {project.links.github && (
-              <Button asChild size="sm" variant="outline" colorPalette="green">
+              <Button asChild size="sm" variant="outline" {...chakraAccent} >
                 <Link
                   href={project.links.github}
                   target="_blank"

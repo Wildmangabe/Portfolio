@@ -16,7 +16,6 @@ export function GlassLink({ href, icon, alt, label, isExternal = true }: GlassLi
       rel={isExternal ? "noopener noreferrer" : undefined}
       p={3}
       borderRadius="lg"
-      backdropFilter="blur(10px)"
       _hover={{ 
         bg: "fg",
         "& img": { filter: "invert(0)" }

@@ -3,7 +3,7 @@ import { Box, Container, Grid, Text, For, Tabs, Button, Center } from "@chakra-u
 import { SectionHeader } from "@/components/ui/section-header";
 import { ProjectCard } from "@/components/ui/project-card";
 import { getProjectsByType } from "@/data/projects";
-import { glassDecorations, glassEffects, glassRadius } from "@/app/theme";
+import { glassDecorations, glassEffects, glassRadius, chakraAccent } from "@/app/theme";
 
 const tabCategories = [
   { label: "All", type: "all" as const },
@@ -30,7 +30,6 @@ export function ProjectsSection() {
         
         <Tabs.Root 
           variant="outline" 
-          colorPalette="green" 
           mt={8} 
           lazyMount 
           defaultValue="all"
@@ -45,9 +44,9 @@ export function ProjectsSection() {
                   {...glassEffects.heavy}
                   {...glassDecorations.heavy}
                   _selected={{
-                    bg: "green.600",
-                    color: "white",
-                    borderColor: "green.600",
+                    bg: "bg.subtle",
+                    color: "fg",
+                    borderColor: "border.subtle",
                   }}
                 >
                   {category.label}
@@ -92,14 +91,14 @@ export function ProjectsSection() {
                         <Center mt={12}>
                           <Button 
                             variant="outline" 
-                            colorPalette="green"
+                            {...chakraAccent}
                             size="lg"
                             fontWeight="bold"
                             {...glassEffects.heavy}
                             {...glassDecorations.heavy}
                             {...glassRadius}
                             onClick={() => setShowAll(!showAll)}
-                            _hover={{ bg: "green.600", color: "white" }}
+                            _hover={{ bg: "bg.subtle", color: "fg" }}
                           >
                             {showAll ? "Show Less" : `Show More `}
                           </Button>

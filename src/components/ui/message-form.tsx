@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import { VStack, Input, Textarea, Button, Field, chakra } from "@chakra-ui/react";
 import { RiArrowRightLine, RiCheckLine } from "react-icons/ri";
-import { glassDecorations, glassEffects, glassRadius } from "@/app/theme";
+import { glassDecorations, glassEffects } from "@/app/theme";
 import { useForm, ValidationError } from '@formspree/react';
 import { toaster } from "@/components/ui/toaster";
 
@@ -79,10 +79,13 @@ export function MessageForm() {
           w="fit-content"
           px={4}
           size="lg"
-          color={state.succeeded ? "brand.green" : "fg"}
+          color={state.succeeded ? "bg.onAccent" : "fg"}
           _hover={!state.succeeded ? { 
-            color: "brand.green",
-            boxShadow: "0 0 30px {colors.brand.green}" 
+            color: "fg.onAccent",
+            boxShadow: {
+              _light: "0 0 30px {colors.brand.black}",
+              _dark: "0 0 30px {colors.brand.green}",
+            } 
           } : {}}
         >
           {state.succeeded ? (
