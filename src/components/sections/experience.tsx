@@ -1,68 +1,79 @@
-import { Accordion, Box, Container, Span, Text, Flex, VStack, HStack } from '@chakra-ui/react';
+import { Accordion, Box, Container, Text, Flex, VStack, HStack, List,Heading } from '@chakra-ui/react';
 import { SectionHeader } from '@/components/ui/section-header';
 import { glassStyles } from '@/app/theme';
+import { experienceData } from '@/data/experience';
 
 export function ExperienceSection() {
-    const items = [
-        { 
-            value: "a", 
-            role: "SRE Intern",
-            company: "Google LLC",
-            location: "Pittsburgh, PA",
-            time: "Summer 2024",
-            text: "Some value 1..." 
-        },
-        { 
-            value: "b", 
-            role: "SWE Intern",
-            company: "Cox Auto Inc",
-            location: "Austin, TX",
-            time: "Summer 2023",
-            text: "Some value 2..." 
-        },
-    ];
-
   return (
-    <Box
-      as="section"
-      id="experience"
-      minH="10vh"
-      py={20}
-    >
+    <Box as="section" id="experience" py={20}>
       <Container maxW="7xl">
         <SectionHeader title="Experience" />
+        
         <Accordion.Root 
           collapsible 
-          defaultValue={["a"]}
+          defaultValue={["google"]} 
           {...glassStyles.light}
-          p={4}
+          p={{ base: 2, md: 4 }}
         >
-            {items.map((item, index) => (
-                <Accordion.Item key={index} value={item.value}>
-                <Accordion.ItemTrigger>
-                    <Flex flex="1" justify="space-between" align="center" gap={4}>
-                        <VStack align="start" gap={1}>
-                            <Text color="fg" fontWeight="semibold">
-                                {item.role}
-                            </Text>
-                            <HStack gap={2} fontSize="sm" color="fg.muted">
-                                <Text>{item.company}</Text>
-                                <Text>•</Text>
-                                <Text>{item.location}</Text>
-                            </HStack>
-                        </VStack>
-                        <Text fontSize="sm" color="fg.muted" whiteSpace="nowrap">
-                            {item.time}
-                        </Text>
-                    </Flex>
-                    <Accordion.ItemIndicator />
-                </Accordion.ItemTrigger>
-                <Accordion.ItemContent>
-                    <Accordion.ItemBody>{item.text}</Accordion.ItemBody>
-                </Accordion.ItemContent>
-                </Accordion.Item>
-            ))}
-            </Accordion.Root>
+          {experienceData.map((item) => (
+            <Accordion.Item key={item.value} value={item.value} borderBottom="1px solid rgba(255,255,255,0.1)">
+              <Accordion.ItemTrigger _hover={{ bg: "whiteAlpha.50" }} py={6}>
+                <Flex flex="1" justify="space-between" align={{ base: "start", md: "center" }} direction={{ base: "column", md: "row" }} gap={4} pr={4}>
+                  <VStack align="start" gap={0}>
+                    <Text color="fg" fontWeight="bold" fontSize="xl">
+                      {item.role}
+                    </Text>
+                    <HStack gap={2} fontSize="md">
+                      <Text color="brand.green" fontWeight="bold">{item.company}</Text>
+                      <Text color="fg.muted">•</Text>
+                      <Text color="fg.muted">{item.location}</Text>
+                    </HStack>
+                  </VStack>
+                  <Text fontSize="sm" color="fg.muted" fontWeight="medium">
+                    {item.time}
+                  </Text>
+                </Flex>
+                <Accordion.ItemIndicator />
+              </Accordion.ItemTrigger>
+              
+              <Accordion.ItemContent>
+                <VStack align="start" gap={6} pb={8} pl={{ base: 4, md: 8 }} pr={4} mt={2}>
+                  <Box borderLeft="2px solid" borderColor="brand.green" pl={4}>
+                    <Text color="fg" fontSize="md" lineHeight="relaxed">
+                      {item.summary}
+                    </Text>
+                  </Box>
+                  <Box w="full">
+                    <Heading size="xs" textTransform="uppercase" letterSpacing="widest" color="brand.green" mb={4}>
+                      Key Contributions
+                    </Heading>
+                    <List.Root gap={3} variant="plain">
+                      {item.contributions.map((bullet, i) => (
+                        <List.Item 
+                          key={i} 
+                          color="fg" 
+                          fontSize="md" 
+                          lineHeight="tall"
+                          position="relative"
+                          pl={6}
+                          _before={{
+                            content: '"•"',
+                            color: "brand.green",
+                            position: "absolute",
+                            left: "0",
+                            fontWeight: "bold"
+                          }}
+                        >
+                          {bullet}
+                        </List.Item>
+                      ))}
+                    </List.Root>
+                  </Box>
+                </VStack>
+              </Accordion.ItemContent>
+            </Accordion.Item>
+          ))}
+        </Accordion.Root>
       </Container>
     </Box>
   );
