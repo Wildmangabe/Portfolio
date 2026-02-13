@@ -30,7 +30,7 @@ export function HomeSection({ isLoadingComplete }: HomeSectionProps) {
               speed={100}
               fontSize={{ base: "6xl", md: "8xl" }}
               fontWeight="bold"
-              color="fg.onAccent"
+              color="fg.accent"
               noDelete={true}
             />
           )}

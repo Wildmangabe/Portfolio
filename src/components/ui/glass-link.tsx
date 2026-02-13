@@ -18,7 +18,7 @@ export function GlassLink({ href, icon, alt, label, isExternal = true }: GlassLi
       borderRadius="lg"
       _hover={{ 
         bg: "fg",
-        "& img": { filter: "invert(0)" }
+        "& img": { filter: { _light: "invert(1)", _dark: "invert(0)" } }
       }}
       _focus={{ 
         boxShadow: "none",

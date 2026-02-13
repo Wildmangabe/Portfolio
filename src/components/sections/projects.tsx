@@ -46,7 +46,6 @@ export function ProjectsSection() {
                   _selected={{
                     bg: "bg.subtle",
                     color: "fg",
-                    borderColor: "border.subtle",
                   }}
                 >
                   {category.label}

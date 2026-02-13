@@ -55,7 +55,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
         )}
           <HStack gap={2}>
             {project.links.github && (
-              <Button asChild size="sm" variant="outline" {...chakraAccent} >
+              <Button asChild size="sm" variant="outline" {...chakraAccent} color={{ _light: "black" }} borderColor={{ _light: "black" }}>
                 <Link
                   href={project.links.github}
                   target="_blank"

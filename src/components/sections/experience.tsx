@@ -26,7 +26,7 @@ export function ExperienceSection() {
                       {item.role}
                     </Text>
                     <HStack gap={2} fontSize="md">
-                      <Text color="fg.accent" fontWeight="bold">{item.company}</Text>
+                      <Text color="fg.onAccent" fontWeight="bold">{item.company}</Text>
                       <Text color="fg.muted">•</Text>
                       <Text color="fg.muted">{item.location}</Text>
                     </HStack>
@@ -40,13 +40,13 @@ export function ExperienceSection() {
               
               <Accordion.ItemContent>
                 <VStack align="start" gap={6} pb={8} pl={{ base: 4, md: 8 }} pr={4} mt={2}>
-                  <Box borderLeft="2px solid" borderColor="fg.accent" pl={4}>
+                  <Box borderLeft="2px solid" borderColor="fg.onAccent" pl={4}>
                     <Text color="fg" fontSize="md" lineHeight="relaxed">
                       {item.summary}
                     </Text>
                   </Box>
                   <Box w="full">
-                    <Heading size="xs" textTransform="uppercase" letterSpacing="widest" color="fg.accent" mb={4}>
+                    <Heading size="xs" textTransform="uppercase" letterSpacing="widest" color="fg.onAccent" mb={4}>
                       Key Contributions
                     </Heading>
                     <List.Root gap={3} variant="plain">
@@ -60,7 +60,7 @@ export function ExperienceSection() {
                           pl={6}
                           _before={{
                             content: '"•"',
-                            color: "fg.accent",
+                            color: "fg.onAccent",
                             position: "absolute",
                             left: "0",
                             fontWeight: "bold"

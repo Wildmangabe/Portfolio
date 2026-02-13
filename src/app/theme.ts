@@ -73,7 +73,7 @@ const customConfig = defineConfig({
             value: { _light: "{colors.brand.black}", _dark: "{colors.brand.offWhite}" } 
           },
           accent: {
-            value: { _light: "{colors.brand.offWhite}", _dark: "{colors.brand.green}" }
+            value: { _light: "{colors.brand.white}", _dark: "{colors.brand.green}" }
           },
           onAccent: {
             value: { _light: "{colors.brand.black}", _dark: "{colors.brand.green}" }
@@ -92,18 +92,18 @@ const customConfig = defineConfig({
         },
         glassLight: {
           bg: {
-            value: { _light: "rgba(0, 0, 0, 0.1)", _dark: "colors.brand.whiteAlpha1" }
+            value: { _light: "rgba(255, 255, 255, 0.3)", _dark: "colors.brand.whiteAlpha1" }
           },
           border: {
-            value: { _light: "rgba(255, 255, 255, 0.2)", _dark: "colors.brand.whiteAlpha2" }
+            value: { _light: "rgba(0, 0, 0, 0.08)", _dark: "colors.brand.whiteAlpha2" }
           }
         },
         glassHeavy: {
           bg: {
-            value: { _light: "rgba(177, 177, 177, 0.15)", _dark: "rgba(0, 0, 0, 0.3)" }
+            value: { _light: "rgba(135, 135, 135, 0.5)", _dark: "rgba(0, 0, 0, 0.3)" }
           },
           border: {
-            value: { _light: "rgba(7, 7, 7, 0.71)", _dark: "rgba(255, 255, 255, 0.1)" }
+            value: { _light: "rgba(0, 0, 0, 0.15)", _dark: "rgba(255, 255, 255, 0.1)" }
           } 
         },
       },

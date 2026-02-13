@@ -50,7 +50,7 @@ export function ContactInfo() {
             src="/icons/email.svg"
             alt="Mail"
             boxSize="5"
-            filter="brightness(0) invert(1)"
+            filter={{ _light: "invert(0)", _dark: "invert(1)" }}
           />
         </Button>
 
