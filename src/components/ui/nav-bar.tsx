@@ -7,7 +7,7 @@ import { glassStyles } from "@/app/theme";
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const navItems = ["Home", "About", "Experience", "Projects", "Leadership", "Contact"];
+  const navItems = ["Home", "About", "Experience", "Projects", "Contact"];
 
   useEffect(() => {
     const handleScroll = () => {
