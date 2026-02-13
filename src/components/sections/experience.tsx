@@ -1,6 +1,6 @@
 import { Accordion, Box, Container, Text, Flex, VStack, HStack, List,Heading } from '@chakra-ui/react';
 import { SectionHeader } from '@/components/ui/section-header';
-import { glassStyles } from '@/app/theme';
+import { glassDecorations, glassEffects, glassRadius } from '@/app/theme';
 import { experienceData } from '@/data/experience';
 
 export function ExperienceSection() {
@@ -12,7 +12,9 @@ export function ExperienceSection() {
         <Accordion.Root 
           collapsible 
           defaultValue={["google"]} 
-          {...glassStyles.light}
+          {...glassEffects.light}
+          {...glassDecorations.light}
+          {...glassRadius}
           p={{ base: 2, md: 4 }}
         >
           {experienceData.map((item) => (

@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { Box, HStack } from "@chakra-ui/react";
 import { NavButton } from "./nav-button";
-import { glassStyles } from "@/app/theme";
+import { glassDecorations, glassEffects } from "@/app/theme";
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -30,7 +30,8 @@ export const Navbar = () => {
       justifyContent="center"
     >
       <Box
-        {...(isScrolled ? glassStyles.heavy : {})}
+        {...(isScrolled ? glassEffects.heavy : {})}
+        {...(isScrolled ? glassDecorations.heavy : {})}
         borderColor={isScrolled ? "border.accent" : "transparent"}
         borderRadius="full"
         px={6}

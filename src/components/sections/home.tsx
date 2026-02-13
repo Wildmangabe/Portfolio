@@ -1,6 +1,6 @@
 import { Box, Container, VStack } from "@chakra-ui/react";
 import { Typewriter } from "@/components/ui/typewriter";
-import { glassStyles } from "@/app/theme";
+import { glassDecorations, glassEffects, glassRadius } from "@/app/theme";
 
 interface HomeSectionProps {
   isLoadingComplete: boolean;
@@ -19,7 +19,9 @@ export function HomeSection({ isLoadingComplete }: HomeSectionProps) {
       <Container 
         maxW="5xl"
         p={{ base: 8, md: 16 }} 
-        {...glassStyles.heavy}
+        {...glassEffects.heavy}
+        {...glassDecorations.heavy}
+        {...glassRadius}
       >
         <VStack gap={4}>
           {isLoadingComplete && (

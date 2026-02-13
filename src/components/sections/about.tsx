@@ -2,7 +2,7 @@ import { Box, Container, Grid, GridItem, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import { SocialLinks } from "@/components/ui/social-links";
 import { SectionHeader } from "@/components/ui/section-header";
-import { glassStyles } from "@/app/theme";
+import { glassDecorations, glassEffects, glassRadius } from "@/app/theme";
 
 export function AboutSection() {
   return (
@@ -26,7 +26,9 @@ export function AboutSection() {
           gap={8}
           alignItems="center"
           p={{ base: 4, md: 8 }} 
-          {...glassStyles.heavy}
+          {...glassEffects.heavy}
+          {...glassDecorations.heavy}
+          {...glassRadius}
         >
           <GridItem>
             <Text fontSize="lg" color="fg.muted" mb={4}>

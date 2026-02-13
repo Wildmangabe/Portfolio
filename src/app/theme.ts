@@ -1,22 +1,31 @@
 import { createSystem, defaultConfig, defineConfig } from "@chakra-ui/react"
 
-export const glassStyles = {
+export const glassEffects = {
   light: {
     backdropFilter: "blur(10px)",
     bg: "glassLight.bg",
-    borderRadius: "xl",
+  },
+  heavy: {
+    backdropFilter: "blur(10px) saturate(150%)",
+    bg: "glassHeavy.bg",
+  }
+}
+
+export const glassDecorations = {
+  light: {
     border: "1px solid",
     borderColor: "glassLight.border",
     boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
   },
   heavy: {
-    backdropFilter: "blur(10px) saturate(150%)",
-    bg: "glassHeavy.bg",
-    borderRadius: "xl",
     border: "1px solid",
     borderColor: "glassHeavy.border",
     boxShadow: "0 8px 32px rgba(0, 0, 0, 0.2)",
   }
+}
+
+export const glassRadius = {
+  borderRadius: "xl",
 }
 
 const customConfig = defineConfig({

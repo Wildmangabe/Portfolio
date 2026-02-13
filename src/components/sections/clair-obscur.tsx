@@ -2,7 +2,7 @@
 
 import { Box, Container, Text } from "@chakra-ui/react";
 import { useColorMode } from "@/components/ui/color-mode";
-import { glassStyles } from "@/app/theme";
+import { glassDecorations, glassEffects, glassRadius } from "@/app/theme";
 import { useEffect, useState } from "react";
 
 export const QuoteSection = () => {
@@ -29,7 +29,9 @@ export const QuoteSection = () => {
         maxW="xl"
         px={6}
         py={3}
-        {...glassStyles.heavy}
+        {...glassEffects.heavy}
+        {...glassDecorations.heavy}
+        {...glassRadius}
       >
         <Text
           fontSize={{ base: "sm", md: "md" }}

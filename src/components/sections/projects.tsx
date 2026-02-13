@@ -3,7 +3,7 @@ import { Box, Container, Grid, Text, For, Tabs, Button, Center } from "@chakra-u
 import { SectionHeader } from "@/components/ui/section-header";
 import { ProjectCard } from "@/components/ui/project-card";
 import { getProjectsByType } from "@/data/projects";
-import { glassStyles } from "@/app/theme";
+import { glassDecorations, glassEffects, glassRadius } from "@/app/theme";
 
 const tabCategories = [
   { label: "All", type: "all" as const },
@@ -42,19 +42,12 @@ export function ProjectsSection() {
                 <Tabs.Trigger 
                   key={category.type} 
                   value={category.type}
-                  bg="rgba(255, 255, 255, 0.1)"
-                  backdropFilter="blur(10px)"
-                  borderColor="rgba(255, 255, 255, 0.1)"
+                  {...glassEffects.heavy}
+                  {...glassDecorations.heavy}
                   _selected={{
                     bg: "green.600",
                     color: "white",
                     borderColor: "green.600",
-                  }}
-                  css={{
-                    _dark: {
-                      bg: "rgba(0, 0, 0, 0.4)",
-                      borderColor: "rgba(255, 255, 255, 0.2)",
-                    },
                   }}
                 >
                   {category.label}
@@ -102,7 +95,9 @@ export function ProjectsSection() {
                             colorPalette="green"
                             size="lg"
                             fontWeight="bold"
-                            {...glassStyles.heavy}
+                            {...glassEffects.heavy}
+                            {...glassDecorations.heavy}
+                            {...glassRadius}
                             onClick={() => setShowAll(!showAll)}
                             _hover={{ bg: "green.600", color: "white" }}
                           >

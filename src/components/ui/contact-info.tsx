@@ -4,7 +4,7 @@ import { Box, VStack, Text, Flex, Button, Image, Icon, useClipboard } from "@cha
 import { SiGooglemaps } from "react-icons/si";
 import { SectionHeader } from "@/components/ui/section-header";
 import { toaster } from "@/components/ui/toaster";
-import { glassStyles } from "@/app/theme";
+import { glassDecorations, glassEffects, glassRadius } from "@/app/theme";
 
 export function ContactInfo() {
   const email = "wildmangabe@email.com";
@@ -23,7 +23,11 @@ export function ContactInfo() {
     <VStack align="start" gap={6}>
       <SectionHeader title="Get In Touch." />
 
-      <Box {...glassStyles.light} p={4}>
+      <Box 
+        {...glassDecorations.light} 
+        {...glassEffects.light} 
+        {...glassRadius}
+        p={4}>
         <Text fontSize="lg" color="fg" maxW="400px">
           I’m always excited to meet new people and hear about new and 
           interesting topics in tech. Whether you have a project in mind or just 
@@ -34,7 +38,9 @@ export function ContactInfo() {
         <Button
           onClick={handleCopy}
           variant="outline"
-          {...glassStyles.light}
+          {...glassEffects.light}
+          {...glassDecorations.light}
+          {...glassRadius}
           _hover={{ bg: "brand.whiteAlpha2", transform: "translateY(-2px)" }}
           p={0} 
           w="12" 
@@ -53,7 +59,9 @@ export function ContactInfo() {
           gap={3}
           h="12"
           px={4}
-          {...glassStyles.light}
+          {...glassEffects.light}
+          {...glassDecorations.light}
+          {...glassRadius}
           color="fg"
           fontWeight="bold"
           fontSize="sm"

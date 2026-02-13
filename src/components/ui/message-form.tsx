@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import { VStack, Input, Textarea, Button, Field, chakra } from "@chakra-ui/react";
 import { RiArrowRightLine, RiCheckLine } from "react-icons/ri";
-import { glassStyles } from "@/app/theme";
+import { glassDecorations, glassEffects, glassRadius } from "@/app/theme";
 import { useForm, ValidationError } from '@formspree/react';
 import { toaster } from "@/components/ui/toaster";
 
@@ -26,7 +26,8 @@ export function MessageForm() {
     <chakra.form 
       onSubmit={handleSubmit}
       p={10} 
-      {...glassStyles.heavy}
+      {...glassDecorations.heavy}
+      {...glassEffects.heavy}
       borderRadius="3xl"
     >
       <VStack gap={5} align="stretch">

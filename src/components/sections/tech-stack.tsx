@@ -3,7 +3,7 @@
 import { Box, Container, SimpleGrid, Heading, Icon, Flex } from "@chakra-ui/react";
 import { Tooltip } from "@/components/ui/tooltip";
 import { SectionHeader } from "@/components/ui/section-header";
-import { glassStyles } from "@/app/theme";
+import { glassDecorations, glassEffects } from "@/app/theme";
 import { TECH_STACK } from "@/data/tech-stack";
 
 export function TechStackSection() {
@@ -26,7 +26,8 @@ export function TechStackSection() {
           {TECH_STACK.map((group) => (
             <Box
               key={group.category}
-              {...glassStyles.light}
+              {...glassEffects.light}
+              {...glassDecorations.light}
               borderRadius="2xl"
               p={8}
               gridColumn={{ 
