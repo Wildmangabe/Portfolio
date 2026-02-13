@@ -1,6 +1,6 @@
 # Portfolio
 
-Personal website and portfolio of **Gabe Wild**, a software developer with interests in full-stack development, systems, and data-driven applications.
+Personal website and portfolio of **Gabe Wild**, a software developer with interests in full-stack development, machine learning systems, and data-driven applications.
 
 This site serves as a central hub to showcase my projects, experience, and technical skills as well as provide a way to get in touch.
 
