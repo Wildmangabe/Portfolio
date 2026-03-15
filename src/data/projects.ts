@@ -90,7 +90,7 @@ export const projects: Project[] = [
   {
     type: "Data Science",
     title: "Global Spotify Trends: Regional & Temporal Analysis",
-    description: "A data mining project that deconstructed global music consumption from 2017-2021. Used audio-feature clustering (K-Means/DBSCAN) and dimensionality reduction (PCA/UMAP) to identify distinct 'music profiles' and analyze how preferences shift across 60+ countries.",
+    description: "A data mining study on global Spotify Top 200 charts (2017-2021) across 60+ countries. Applied K-Means and DBSCAN clustering on audio features to identify 4 distinct music profiles, then built a Song2Vec (Item2Vec) pipeline to generate cultural embedding vectors and quantify how regional music taste shifts over time.",
     links: {
       github: "https://github.com/Wildmangabe/spotify-trend-analysis",
       demo: "https://colab.research.google.com/drive/10brhy7pfc4WsMLQb-62AXSDOHfZ_VeeF?usp=sharing"

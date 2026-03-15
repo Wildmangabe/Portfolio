@@ -34,6 +34,7 @@ export default function Home() {
         <ExperienceSection />
         <ProjectsSection />
         <TechStackSection />
+        <LeadershipSection />
         <ContactSection />
         <QuoteSection />
       </main>
