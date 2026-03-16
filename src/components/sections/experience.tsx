@@ -10,7 +10,6 @@ export function ExperienceSection() {
         <SectionHeader title="Experience" />
         
         <Accordion.Root 
-          collapsible 
           defaultValue={["google"]} 
           {...glassEffects.light}
           {...glassDecorations.light}
