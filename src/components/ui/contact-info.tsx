@@ -7,7 +7,7 @@ import { toaster } from "@/components/ui/toaster";
 import { glassDecorations, glassEffects, glassRadius } from "@/app/theme";
 
 export function ContactInfo() {
-  const email = "wildmangabe@email.com";
+  const email = "wildmangabe@gmail.com";
   const { copy } = useClipboard({ value: email });
 
   const handleCopy = () => {
